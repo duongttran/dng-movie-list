@@ -14,14 +14,14 @@ export default function CarouselSlide() {
                         />
                    </div>
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
+                        <h3>Welcome to DMBD</h3>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://static.wixstatic.com/media/2656c9_8ee715e2a99140bc83ff836eef1e5340~mv2_d_1600_1200_s_2.jpg/v1/fill/w_1100,h_825,al_c,q_85,usm_0.66_1.00_0.01/2656c9_8ee715e2a99140bc83ff836eef1e5340~mv2_d_1600_1200_s_2.webp"
+                        src="https://static1.dienanh.net/upload//2018/06/11/phin-alice-in-wonderland-alice-o-xu-so-than-tien-672e7d.jpg"
                      
                         alt="Second slide"
                     />
@@ -34,7 +34,7 @@ export default function CarouselSlide() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://1.bp.blogspot.com/-7ye4L_ApSTY/XNqCrCBsyUI/AAAAAAAApPg/KAkH2Y8NJCw8QasXHJHMVAJBFQ2I-XuYwCLcBGAs/s1600/53465139_2364951046851173_7524538563765993472_o.jpg"
+                        src="https://katherinetran.files.wordpress.com/2015/01/maleficent-poster.jpg"
                         alt="Third slide"
                     />
     

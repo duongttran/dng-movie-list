@@ -49,6 +49,7 @@ p {
     height: 550px;
     object-fit: cover;
     object-position: top;
+    
 }
 
 
@@ -196,7 +197,7 @@ div[class*="sortBy"] {
     max-width: 700px;
     height: auto;
     margin:  0 auto;
-    top: 20%;
+    top: 23%;
     
     padding: 50px;
     /* padding-top: 70px; */
@@ -204,9 +205,18 @@ div[class*="sortBy"] {
     outline: 0;  
 }
 
-/* .fa-times-circle {
-    color: white;
-} */
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 2000ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+}
 
 .close-button {
     color: white;
@@ -217,6 +227,10 @@ div[class*="sortBy"] {
     z-index: 3000;
 }
 
+.ReactModal__Overlay, 
+.ReactModal__Overlay--after-open {
+    background-color: rgba(0, 0, 0, 0.5)!important;
+}
 
 
 

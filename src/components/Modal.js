@@ -25,7 +25,7 @@ export default function TrailerModal(props) {
     }, [props.movieId])
 
     return (
-        <ReactModal isOpen={props.modalOpen} className="my-window" style={styleModal}>
+        <ReactModal isOpen={props.modalOpen} className="my-window" style={styleModal} closeTimeoutMS={2000}>
              <i className="far fa-times-circle close-button fa-2x" onClick={() => props.closeModal()}></i>
             <div  className="video-container">
                 <iframe className="responsive-iframe" width="560" height="315" src={`https://www.youtube.com/embed/${youtubeId}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
