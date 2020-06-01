@@ -17,9 +17,9 @@ export default function MovieList(props) {
     return (
         <div class="main-stage">
             <div className="container-fluid">
-                <div className="row">
-
-                    <div className="col-md-2 filter-list">
+                <div className="row main-part">
+                
+                    <div className="col-md-2 col-sm-12 filter-list">
                         <div className="filter-movie">
 
                             <Dropdown className="dropdown-filter">
@@ -87,8 +87,8 @@ export default function MovieList(props) {
 
                         </div>
                     </div>
-
-                    <div className="col-md-10">
+                 
+                    <div className="col-md-10 col-sm-12 movie-list">
                         {/* <h1 className="text-center">Duong's movie</h1> */}
                         <div className="list-of-movie">
                             {props.movieList.map((item) => {

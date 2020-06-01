@@ -128,8 +128,13 @@ div[class*="sortBy"] {
     border:  lightseagreen!important;
 }
 
+.input-range__slider:active{
+    background-color: yellowgreen!important;
+    border:  yellowgreen!important;
+}
+
 .input-range__track--active {
-    background-color:  lightseagreen!important;
+    background-color: lightseagreen!important;
 }
 
 .success {
@@ -149,6 +154,17 @@ div[class*="sortBy"] {
     font-size: 12px;
     border-radius: 20px;
     cursor: pointer;
+    transition: .5s;
+}
+
+.cate-chunk span:hover {
+    background-color: yellowgreen;
+    transition: .5s;
+}
+
+.success:hover {
+    cursor: pointer;
+    background-color: yellowgreen;
 }
 
 .year-chunk  {
@@ -165,9 +181,6 @@ div[class*="sortBy"] {
     border-radius: 20px;
 }
 
-.year-chunk span:nth-child(2n) {
-    background-color: darkgoldenrod;
-}
 
 .year-chunk span:hover {
     cursor: pointer;
@@ -185,7 +198,8 @@ div[class*="sortBy"] {
     margin:  0 auto;
     top: 20%;
     
-    padding: 20px;
+    padding: 50px;
+    /* padding-top: 70px; */
     border-radius: 5px;
     outline: 0;  
 }
@@ -199,6 +213,8 @@ div[class*="sortBy"] {
     position: absolute;
     top: 20px;
     right: 20px;
+    cursor: pointer;
+    z-index: 3000;
 }
 
 
@@ -272,11 +288,11 @@ div[class*="sortBy"] {
     left: 0;
     bottom: 0;
     right: 0;
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
   }
 
- 
+
 
 @media(max-width: 580px){
     .navbar input {
