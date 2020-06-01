@@ -27,7 +27,7 @@ export default function MovieCard(props) {
 
                 <ListGroupItem>Genre: {movie.genre_ids.map(movieId => {
                     return (
-                        <Badge pill variant="success" className="success">{props.genreFromMovieList.find(genreId => genreId.id === movieId).name}
+                        <Badge pill variant="success" className="success" onClick={() => props.sortByCateFromML(movieId)}>{props.genreFromMovieList.find(genreId => genreId.id === movieId).name}
                         </Badge>)
                 })}
 
@@ -35,7 +35,7 @@ export default function MovieCard(props) {
             </ListGroup>
             <Card.Body className="card-link">
                 <Card.Link href={`https://www.themoviedb.org/movie/${movie.id}?language=en-US`} target="_blank">More Details</Card.Link>
-                <Card.Link href="#0" disabled>Play trailer</Card.Link>
+                <Card.Link href="#0" onClick={()=>props.openModalfromMovieList()}>Play trailer</Card.Link>
             </Card.Body>
         </Card>
 

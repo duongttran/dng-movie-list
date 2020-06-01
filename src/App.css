@@ -148,6 +148,7 @@ div[class*="sortBy"] {
     color: white;
     font-size: 12px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .year-chunk  {

@@ -10,13 +10,14 @@ import CarouselSlide from './components/CarouselSlide'
 //import Button from 'react-bootstrap/Button'
 
 import ReactPaginate from 'react-paginate';
+import Modal from './components/Modal'
 
 const apiKey = process.env.REACT_APP_APIKEY
 function App() {
   // let [movieList, setMovieList] = useState(null)
   let [movieList, setMovieList] = useState([]);
   let [allMovies, setAllMovies] = useState([]);
-  
+
   let [listName, setListName] = useState("now_playing")
 
   let [totalPages, setTotalPage] = useState(0)
@@ -25,6 +26,9 @@ function App() {
 
   let [value, setValue] = useState({ min: 1980, max: 2020 })
   let [value2, setValue2] = useState({ max: 10 })
+
+  let [modalOpen, setModalOpen] = useState(false)
+  let [movieId, setMovieId] = useState("")
 
   const getNowPlayingMovie = async (page) => {
     let url = `https://api.themoviedb.org/3/movie/${listName}?api_key=${apiKey}&language=en-US&page=${page}`
@@ -38,6 +42,8 @@ function App() {
     getMovieYear()
     console.log("movies", result)
   }
+
+
 
   let getGenreList = async () => {
     let url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`;
@@ -65,15 +71,25 @@ function App() {
     //const duplicatedMovieList = movieList.slice(0);
     const duplicatedMovieList = [...movieList]
     const sortedMoveList = duplicatedMovieList.sort(function (a, b) {
-    
+
       return (a.vote_average - b.vote_average) * order;
 
     });
     setMovieList(sortedMoveList);
-    
+
   };
 
-  
+  const closeModal = () => {
+    console.log("hehehe")
+    setModalOpen(false);
+  }
+  const openModal = (movieIdFromMovieList) => {
+    console.log("hehehe")
+    setModalOpen(true);
+    setMovieId(movieIdFromMovieList)
+  }
+
+
   useEffect(() => {
     console.log("reset the list");
     //getNowPlayingMovie(1);
@@ -102,6 +118,10 @@ function App() {
     console.log("hihihi")
   }
 
+  let sortByCategory = (itemId) => {
+    setMovieList(allMovies.filter(movie => movie.genre_ids.includes(itemId)));
+  }
+
   let getMovieYear = () => {
     let allMY = allMovies.map(movie => Number(movie.release_date.split("-")[0]))
     //   let maxYearInTheRange = allMY.reduce(function(a, b) {
@@ -124,7 +144,9 @@ function App() {
       <CarouselSlide />
 
       <div>
-        <MovieList movieList={movieList} genreFromApp={genreList} sortPopularity={sortByPop} sortRating={sortByRating} value={value} setValue={handleYearSlider} ratingValue={value2} setRatingValue={handleRatingSliderChange}/>
+        <MovieList movieList={movieList} genreFromApp={genreList} sortPopularity={sortByPop} sortRating={sortByRating} value={value} setValue={handleYearSlider} ratingValue={value2} setRatingValue={handleRatingSliderChange} sortByCate={sortByCategory} openModalfromApp={openModal} />
+
+      <Modal closeModal={closeModal} modalOpen={modalOpen} movieId={movieId}/>
 
         <ReactPaginate className="see-more"
           previousLabel={'previous'}

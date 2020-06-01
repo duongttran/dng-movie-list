@@ -69,7 +69,7 @@ export default function MovieList(props) {
                             <div className="">
                                 <p>Categories</p>
                                 <div className="cate-chunk">
-                                    {props.genreFromApp.map(item => <span>{item.name}</span>)}
+                                    {props.genreFromApp.map(item => <span onClick={() => props.sortByCate(item.id)}>{item.name}</span>)}
                                 </div>
 
                                 {/* how to sort cate:
@@ -92,7 +92,7 @@ export default function MovieList(props) {
                         {/* <h1 className="text-center">Duong's movie</h1> */}
                         <div className="list-of-movie">
                             {props.movieList.map((item) => {
-                                return <MovieCard movie={item} genreFromMovieList={props.genreFromApp} />;
+                                return <MovieCard movie={item} openModalfromMovieList={()=> props.openModalfromApp(item.id)} genreFromMovieList={props.genreFromApp} sortByCateFromML={props.sortByCate}/>;
                             })}
 
                         </div>
