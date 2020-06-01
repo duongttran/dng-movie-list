@@ -16,6 +16,7 @@ const apiKey = process.env.REACT_APP_APIKEY
 function App() {
   // let [movieList, setMovieList] = useState(null)
   let [movieList, setMovieList] = useState([]);
+  // movieList.map movieList.filter
   let [allMovies, setAllMovies] = useState([]);
 
   let [listName, setListName] = useState("now_playing")
