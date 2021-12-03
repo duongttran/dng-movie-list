@@ -89,7 +89,7 @@ export default function MovieList(props) {
                     </div>
                  
                     <div className="col-md-10 col-sm-12 movie-list">
-                        {/* <h1 className="text-center">Duong's movie</h1> */}
+                        {/* <h1 className="text-center">DNG's movie</h1> */}
                         <div className="list-of-movie">
                             {props.movieList.map((item) => {
                                 return <MovieCard movie={item} openModalfromMovieList={()=> props.openModalfromApp(item.id)} genreFromMovieList={props.genreFromApp} sortByCateFromML={props.sortByCate}/>;
