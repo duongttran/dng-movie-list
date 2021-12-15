@@ -9,7 +9,7 @@ export default function CarouselSlide() {
                    <div class="img-slide">
                         <img
                             className="d-block w-100"
-                            src="https://downtownwinnipegbiz.com/wp-content/uploads/2016/07/downtown-winnipeg-drive-in-movie-superhero-website-slider.jpg"
+                            src="https://taoanhonline.com/wp-content/uploads/2019/07/hinh-nen-avenger-8.jpg"
                             alt="First slide"
                         />
                    </div>
