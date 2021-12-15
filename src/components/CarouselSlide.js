@@ -15,7 +15,7 @@ export default function CarouselSlide() {
                    </div>
                     <Carousel.Caption>
                         <h3>Welcome to DMBD</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p>This is my website, these are my favorite movies.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -28,7 +28,7 @@ export default function CarouselSlide() {
     
                     <Carousel.Caption>
                         <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Hello world. Today is a beautiful day.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -40,7 +40,7 @@ export default function CarouselSlide() {
     
                     <Carousel.Caption>
                         <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <p>Hello world. Have a nice weekend.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
